@@ -1,0 +1,19 @@
+{
+    "name": "dudoserovich/composer-twig",
+    "autoload": {
+        "psr-4": {
+            "Dudoserovich\\ComposerTwig\\": "src/"
+        },
+        "files": ["src/LoggerWrapper.php"]
+    },
+    "authors": [
+        {
+            "name": "Dudoserovich",
+            "email": "mr.egoryk@mail.ru"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^2.5",
+        "twig/twig": "^3.3"
+    }
+}

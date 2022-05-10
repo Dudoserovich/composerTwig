@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <button class="btn btn-success" id="1">Создать лог - Debug</button>
+    <button class="btn btn-warning" id="3">Создать лог - Warning</button>
+    <button class="btn btn-danger" id="2">Создать лог - Error</button>
+{% endblock %}
+
+{% block logs %}
+    {% if logs|length > 0 %}
+    {% for log in logs %}
+        <div class="mb-2 card log">
+            <div class="card-body">
+                <h5 class="card-title">{{ log.level_name }}</h5>
+                <h6 class="card-subtitle text-muted">{{ log.datetime }}</h6>
+                <div class="mess">{{ log.message }}</div>
+            </div>
+        </div>
+    {% endfor %}
+    {% else %}
+        <p class="lead" style="font-size: 25px!important;">Ничегошеньки нет ещё</p>
+    {% endif %}
+{% endblock %}
